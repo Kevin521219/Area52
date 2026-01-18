@@ -1,197 +1,89 @@
 /* =====================================================
    0. RESET & BASE
    ===================================================== */
-
 * {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  font-family: 'Nunito', sans-serif;
-  color: var(--dark-green);
-
-  background-color: var(--sand);
-  background-image: radial-gradient(#e0d0b0 2px, transparent 2px);
-  background-size: 30px 30px;
+    margin: 0;
+    font-family: 'Nunito', sans-serif;
+    color: var(--dark-green);
+    background-color: var(--sand);
+    /* De stippels blijven op de body */
+    background-image: radial-gradient(#e0d0b0 2px, transparent 2px);
+    background-size: 30px 30px;
 }
-
-main {
-  display: block;
-}
-
-h1, h2, h3, h4, h5 {
-  font-weight: 900;
-}
-
-/* =====================================================
-   1. DESIGN TOKENS
-   ===================================================== */
 
 :root {
-  --area-purple: #7b2cbf;
-  --area-lime:   #9be15d;
-  --area-pink:   #ff5fa2;
-  --area-yellow: #ffca28;
-
-  --dark-green:  #2f4b3a;
-  --sand:        #f6ebd9;
-  --white:       #ffffff;
+    --area-purple: #7b2cbf;
+    --area-lime:   #9be15d;
+    --area-pink:   #ff5fa2;
+    --area-yellow: #ffca28;
+    --dark-green:  #2f4b3a;
+    --sand:        #f6ebd9;
+    --white:       #ffffff;
 }
 
 /* =====================================================
-   2. HEADER & NAVIGATION
-   ===================================================== */
-
-
-
-/* =====================================================
-   GEOPTIMALISEERDE HEADER (CENTER PARCS STIJL)
+   1. HEADER & NAVIGATION (ROZE)
    ===================================================== */
 .navbar {
-  background-color: var(--area-purple) !important;
-  /* Verwijder de dikke groene border-bottom */
-  border-bottom: none !important; 
-  padding: 1rem 0 !important;
-  /* Voeg een subtiele schaduw toe voor diepte in plaats van een lijn */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  z-index: 1000;
+    background-color: var(--area-pink) !important;
+    border-bottom: none !important; 
+    padding: 1rem 0 !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    z-index: 1000;
 }
 
-/* De 'Lime' kleur komt nu terug als accent bij hover, niet als harde lijn */
-.nav-link:hover {
-  color: var(--area-lime) !important;
-  transform: translateY(-1px);
-}
-
-/* Zorg dat het logo en de menu-knop mooi uitgelijnd zijn */
-.navbar .container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* LOGO */
 .brand-logo {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-  font-weight: 900;
-  color: white !important;
+    display: flex;
+    flex-direction: column;
+    line-height: 1;
+    font-weight: 900;
+    color: white !important;
+    text-decoration: none;
 }
 
 .logo-main {
-  font-size: 1.6rem;
-  letter-spacing: -0.5px;
+    font-size: 1.6rem;
+    color: var(--area-lime);
+    text-shadow: 2px 2px 0 #6fa83f, 4px 4px 0 #4d7a2d;
 }
 
-.logo-sub {
-  font-size: 0.65rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  opacity: 0.85;
-  margin-top: 4px;
-}
-
-/* Logo animation */
-.logo-test .logo-main {
-  color: var(--area-lime);
-  text-shadow:
-    2px 2px 0 #6fa83f,
-    4px 4px 0 #4d7a2d;
-  transition: transform 0.25s ease, text-shadow 0.25s ease;
-}
-
-.logo-test:hover .logo-main {
-  transform: translateY(-2px) rotate(-1deg);
-  text-shadow:
-    3px 3px 0 #6fa83f,
-    6px 6px 0 #4d7a2d;
-}
-
-/* NAV LINKS */
-.nav-link,
-.pill-link {
-  color: white !important;
-  font-weight: 800;
-  text-transform: uppercase;
-  padding: 6px 16px !important;
-  font-size: 0.85rem;
-  border-radius: 50px;
-  transition: all 0.25s ease;
+.nav-link, .pill-link {
+    color: white !important;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 6px 16px !important;
+    font-size: 0.85rem;
+    transition: all 0.25s ease;
 }
 
 .nav-link:hover {
-  background-color: rgba(255,255,255,0.2);
-  transform: scale(1.05);
+    color: var(--area-lime) !important;
+    transform: scale(1.05);
 }
 
-/* CTA BUTTON */
+/* MENU KNOP (LIME) */
 .btn-cta-pill {
-  background-color: var(--area-yellow);
-  color: var(--dark-green) !important;
-  font-weight: 900;
-  padding: 8px 22px;
-  font-size: 0.85rem;
-  border-radius: 50px;
-  text-decoration: none;
-  display: inline-block;
-
-  box-shadow: 0 4px 0 #d4a017;
-  transition: all 0.2s ease;
+    background-color: var(--area-lime) !important;
+    color: var(--dark-green) !important;
+    border: none !important;
+    padding: 10px 25px;
+    border-radius: 50px;
+    font-weight: 900;
+    box-shadow: 0 4px 0 #82b82c !important; /* Groene schaduw ipv zwart */
+    transition: all 0.2s ease;
 }
-
-.btn-cta-pill:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 0 #d4a017;
-}
-
-/* ================================
-   HAMBURGER MENU (OFFCANVAS)
-   ================================ */
-
-.extra-menu {
-  background: var(--area-purple);
-  color: white;
-  border-left: 6px solid var(--area-lime);
-}
-
-.extra-menu .offcanvas-title {
-  font-weight: 900;
-}
-
-.extra-link {
-  display: block;
-  background: white;
-  color: var(--dark-green);
-  font-weight: 900;
-  text-decoration: none;
-
-  padding: 14px 20px;
-  border-radius: 20px;
-  margin-bottom: 15px;
-
-  box-shadow: 6px 6px 0 rgba(0,0,0,0.15);
-  transition: 0.2s;
-}
-
-.extra-link:hover {
-  transform: translateY(-3px);
-  box-shadow: 10px 10px 0 rgba(0,0,0,0.2);
-}
-
-
-
 
 /* =====================================================
-   3. HERO SECTION
+   2. HERO SECTION
    ===================================================== */
-/* CONTAINER SETUP */
-/* Container voor de Video Hero */
 .hero-video-container {
     position: relative;
     width: 100%;
-    height: 85vh; /* Geeft die grotere Center Parcs look */
+    height: 85vh;
     overflow: hidden;
     background-color: var(--area-purple);
 }
@@ -205,7 +97,6 @@ h1, h2, h3, h4, h5 {
     z-index: 1;
 }
 
-/* Paarse gloed overlay zoals in je voorbeeld */
 .video-overlay {
     position: absolute;
     top: 0; left: 0;
@@ -214,289 +105,250 @@ h1, h2, h3, h4, h5 {
     z-index: 2;
 }
 
-/* Tekst en knop centreren over de video */
 .hero-content-overlay {
     position: absolute;
     top: 50%; left: 50%;
     transform: translate(-50%, -50%);
     width: 100%;
     z-index: 3;
+    text-align: center;
 }
 
-.hero-subtitle {
-    font-size: 1.4rem;
-    font-weight: 400;
-    letter-spacing: 0.5px;
+.hero-content-overlay h1 {
+    color: var(--area-pink) !important;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    line-height: 0.9;
+    font-size: clamp(3rem, 10vw, 6rem);
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.2); 
 }
 
-/* De knop uit je brandguide (geel met diepte) */
 .btn-plan-verblijf {
-    background-color: var(--area-yellow);
+    background-color: var(--area-lime) !important;
     color: var(--dark-green) !important;
     padding: 12px 35px;
     border-radius: 50px;
     font-weight: 900;
     text-decoration: none;
-    display: inline-block;
-    box-shadow: 0 6px 0 #d4a017; /* Diepte effect zoals gevraagd */
+    box-shadow: 0 6px 0 #82b82c !important;
     transition: all 0.2s ease;
 }
 
-.btn-plan-verblijf:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 9px 0 #d4a017;
+.btn-book-now {
+    background-color: var(--area-lime) !important;
+    color: var(--dark-green) !important;
+    padding: 12px 30px;
+    border-radius: 50px;
+    font-weight: 900;
+    text-decoration: none;
+    box-shadow: 0 6px 0 #82b82c !important;
+    border: none !important;
 }
 
-/* De kleine alien onder de knop */
-.alien-mini {
-    max-width: 120px;
-    filter: drop-shadow(0 10px 10px rgba(0,0,0,0.2));
-    animation: floatAlien 3s ease-in-out infinite;
+
+
+/* =====================================================
+   5. DE ROZE FOOTER (VERBETERD)
+   ===================================================== */
+.area-footer, 
+.footer-top, 
+.footer-main {
+    background-color: var(--area-pink) !important; 
+    background-image: none !important; /* Blokkeert de stippels */
+    color: white !important;
+    border: none !important;
 }
 
+/* GELE WOORDEN MET GROENE SCHADUW (NET ALS MENU) */
+.footer-top h4, 
+.footer-main h5 {
+    color: var(--area-yellow) !important;
+    font-weight: 900;
+    text-transform: uppercase;
+    /* De gelaagde groene schaduw voor die 3D look */
+    text-shadow: 2px 2px 0 #6fa83f, 4px 4px 0 #4d7a2d !important;
+    margin-bottom: 1.2rem;
+}
+
+/* LINKS WIT MAKEN & HOVER EFFECT */
+.footer-main a:hover, 
+.footer-main ul li a:hover {
+    color: var(--area-white) !important; /* De kleur van je menu-knop */
+    transform: translateX(5px); /* Schuift 5px naar rechts voor interactie */
+    text-decoration: underline; /* Optioneel: voor extra duidelijkheid */
+
+}
+
+/* 4. Fix voor de tekst onder Service & Contact */
+.footer-top p {
+    color: #ffffff !important;
+}
+
+/* ONDERSTE BALK */
+.footer-bottom {
+    background: linear-gradient(color-pink) !important;
+    color: white !important;
+    padding: 25px 0;
+    text-align: center;
+    font-weight: 900;
+    box-shadow: none !important;
+    border: none !important;
+}
+/* 1. Definieer de zweef-beweging */
 @keyframes floatAlien {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-10px); }
-
-
-.hero-section .container {
-  max-width: 700px;
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+    50% {
+        transform: translateY(-15px) rotate(2deg); /* Beweegt 15px omhoog en kantelt licht */
+    }
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
 }
 
-/* CTA spacing */
-.hero-cta {
-  margin-bottom: 16px;
+/* 2. Pas de animatie toe op de mascotte-afbeelding */
+.menu-alien {
+    /* Increase this value to make the mascot larger (e.g., from 200px to 400px) */
+    width: 400px !important; 
+    
+    /* Ensures the image stays centered in the menu */
+    display: block;
+    margin: 0 auto;
+    
+    /* Keeps the float animation we added earlier */
+    animation: floatAlien 3s ease-in-out infinite;
+    
+    /* Prevents the alien from overflowing the menu on smaller phone screens */
+    max-width: 90%; 
+    height: auto;
+
+    
 }
 
-/* HERO MASCOT */
-.hero-mascot {
-  display: flex;
-  justify-content: center;
-  margin-top: 0;
-  pointer-events: none;
-}
-
-.hero-mascot img {
-  width: 220px;
-  max-width: 60%;
-  height: auto;
-  opacity: 0.9;
-
-  animation: mascotFloat 6s ease-in-out infinite;
-}
-
-@keyframes mascotFloat {
-  0%, 100% { transform: translateY(8px); }
-  50%      { transform: translateY(0); }
-}
-
-/* WAVE DIVIDER */
-.wave-divider {
-  position: absolute;
-  bottom: -1px;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-}
-
-.wave-divider svg {
-  width: 133%;
-  height: 60px;
-}
-
-.shape-fill {
-  fill: var(--sand);
+/* GELE KOPPEN MET GROENE SCHADUW */
+.footer-top h4, 
+.footer-main h5 {
+    color: var(--area-white) !important;
+    font-weight: 900;
+    text-transform: uppercase;
+    /* Gelaagde schaduw voor het "green shade" effect */
+    text-shadow: 2px 2px 0 #6fa83f, 4px 4px 0 #4d7a2d !important;
+    margin-bottom: 1rem;
 }
 
 /* =====================================================
-   4. NAVIGATION CHOICES
+   6. ACCOMMODATIE CARDS STYLING
+   ===================================================== */
+.accommodation-card {
+    background-color: var(--white);
+    border-radius: 30px;
+    border: 4px solid var(--area-purple);
+    transition: all 0.3s ease;
+    height: 100%;
+    box-shadow: 0 10px 0 var(--area-purple);
+    margin-bottom: 20px;
+}
+
+.accommodation-card:hover {
+    transform: translateY(-10px); /* Kaart springt omhoog bij hover */
+    box-shadow: 0 15px 0 var(--area-purple);
+    border-color: var(--area-pink);
+}
+
+.section-title {
+    color: var(--area-purple);
+    font-weight: 900;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 0px var(--area-lime);
+}
+
+/* =====================================================
+   7. DE ROZE FOOTER FIX (GEEN BLAUWE LINKS)
+   ===================================================== */
+.area-footer {
+    background-color: var(--area-pink) !important; 
+    background-image: none !important; /* Verwijdert de stippels */
+    padding: 60px 0;
+}
+
+/* Fix voor de gele woorden met groene schaduw */
+.footer-top h4, .footer-main h5 {
+    color: var(--area-yellow) !important;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-shadow: 2px 2px 0 #6fa83f, 4px 4px 0 #4d7a2d !important;
+}
+
+/* Maak alle links wit in plaats van blauw */
+.footer-main a {
+    color: #ffffff !important;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.2s ease;
+}
+
+.footer-main a:hover {
+    color: var(--area-lime) !important;
+    transform: translateX(5px);
+}
+
+/* =====================================================
+   DIT MOET ONDERAAN JE STYLE.CSS (ALLES-IN-ÉÉN FIX)
    ===================================================== */
 
-.nav-choices {
-  position: relative;
-  z-index: 5;
-  margin-top: -80px;
-  padding-bottom: 120px;
+/* 1. DE ACCOMMODATIE KAARTEN (VAN KAAL NAAR VET) */
+.accommodation-card {
+    background-color: #ffffff !important;
+    border: 4px solid #7b2cbf !important; /* Paarse rand */
+    border-radius: 30px !important;
+    padding: 30px !important;
+    margin-bottom: 30px !important;
+    transition: all 0.3s ease-in-out !important;
+    box-shadow: 0 10px 0 #7b2cbf !important;
+    text-align: center;
 }
 
-.nav-choice-card {
-  display: block;
-  height: 100%;
-  padding: 40px 30px;
-  text-align: center;
-  text-decoration: none;
-  background-color: var(--white);
-  border-radius: 40px;
-  border: 4px solid var(--card-color);
-  box-shadow: 0 12px 0 rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
+.accommodation-card:hover {
+    transform: translateY(-12px) !important;
+    box-shadow: 0 18px 0 #7b2cbf !important;
 }
 
-.nav-choice-card:hover {
-  transform: translateY(-12px) scale(1.03);
+.accommodation-card h3 {
+    color: #7b2cbf !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
+    margin-top: 15px;
 }
 
-.nav-icon-circle {
-  width: 90px;
-  height: 90px;
-  margin: 0 auto 25px;
-  border-radius: 50%;
-  background-color: var(--card-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 2.5rem;
-  color: white;
+/* 2. DE FOOTER: DWING ROZE AF EN VERWIJDER STIPPELS */
+footer, .area-footer, .footer-main {
+    background-color: #ff5fa2 !important; /* var(--area-pink) */
+    background-image: none !important; 
+    color: #ffffff !important;
+    padding: 50px 0 !important;
 }
 
-.nav-choice-title {
-  font-size: 1.6rem;
-  font-weight: 900;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  color: var(--dark-green);
+/* 3. DE LINKS: DWING WIT AF (VERWIJDER BLAUW) */
+footer a, .footer-main a, .footer-main ul li a {
+    color: #ffffff !important; 
+    text-decoration: none !important;
+    font-weight: 700 !important;
+    display: inline-block !important;
+    transition: 0.2s !important;
 }
 
-.nav-choice-subtitle {
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 25px;
+footer a:hover {
+    color: #9be15d !important; /* var(--area-lime) */
+    transform: translateX(5px) !important;
 }
 
-.nav-choice-button {
-  display: inline-block;
-  padding: 10px 30px;
-  border-radius: 50px;
-  font-weight: 900;
-  text-transform: uppercase;
-  background-color: var(--card-color);
-  color: white;
+/* 4. DE GELE TITELS MET GROENE SCHADUW */
+footer h4, footer h5, .footer-main h5 {
+    color: white!important; /* var(--area-yellow) */
+    text-shadow: 2px 2px 0 #6fa83f, 4px 4px 0 #4d7a2d !important;
+    font-weight: 900 !important;
+    text-transform: uppercase !important;
 }
 
-/* ===============================
-   AREA 52 FOOTER (FINAL)
-=============================== */
-
-.area-footer {
-  margin-top: 120px;
-  font-size: 0.9rem;
-  color: var(--dark-green);
-}
-
-/* REMOVE DOT PATTERN */
-.area-footer,
-.area-footer * {
-  background-image: none !important;
-}
-
-/* -----------------------------
-   TOP STRIP (PURPLE)
------------------------------ */
-.footer-top {
-  background: var(--area-purple);
-  color: white;
-  padding: 50px 0;
-  border-top: 6px solid var(--area-lime);
-}
-
-.footer-top-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 40px;
-  align-items: center;
-}
-
-.footer-top h4 {
-  font-weight: 900;
-  margin-bottom: 10px;
-}
-
-.footer-top p {
-  opacity: 0.9;
-  max-width: 320px;
-}
-
-.footer-socials span {
-  font-size: 1.6rem;
-  margin-right: 12px;
-  cursor: pointer;
-  transition: transform 0.2s ease;
-}
-
-.footer-socials span:hover {
-  transform: scale(1.2) rotate(-5deg);
-}
-
-/* Newsletter */
-.newsletter {
-  display: flex;
-  gap: 12px;
-}
-
-.newsletter input {
-  flex: 1;
-  border: none;
-  padding: 12px 16px;
-  border-radius: 50px;
-  font-weight: 600;
-}
-
-.newsletter button {
-  background: var(--area-yellow);
-  border: none;
-  font-weight: 900;
-  padding: 12px 20px;
-  border-radius: 50px;
-  box-shadow: 0 4px 0 #d4a017;
-  cursor: pointer;
-}
-
-/* -----------------------------
-   MAIN FOOTER (SAND)
------------------------------ */
-.footer-main {
-  background: var(--sand);
-  padding: 80px 0;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 60px;
-}
-
-.footer-grid h4 {
-  font-weight: 900;
-  margin-bottom: 14px;
-}
-
-.footer-grid ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer-grid li {
-  margin-bottom: 10px;
-  opacity: 0.8;
-}
-
-/* -----------------------------
-   BRAND BAR (GREEN → YELLOW)
------------------------------ */
-.footer-bottom {
-  background: linear-gradient(
-    90deg,
-    #2f4b3a 0%,
-    #4f7c53 30%,
-    #9be15d 65%,
-    #ffca28 100%
-  );
-  color: #1e2f23;
-  text-align: center;
-  padding: 28px 20px;
-  font-weight: 900;
-  letter-spacing: 0.4px;
-  text-shadow: 0 1px 0 rgba(255,255,255,0.35);
-  box-shadow: inset 0 6px 0 rgba(0,0,0,0.15);
-}

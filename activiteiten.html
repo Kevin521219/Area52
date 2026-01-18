@@ -2,14 +2,30 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <title>Area 52 – Activiteiten</title>
+  <title>Area 52 Vakantiepark | Digital Experience</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+
+<div class="offcanvas offcanvas-end extra-menu" tabindex="-1" id="extraMenu">
+  <div class="offcanvas-header">
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+  </div>
+  <div class="offcanvas-body">
+    <a href="gallery.html" class="extra-link"> Gallery</a>
+    <a href="faq.html" class="extra-link"> FAQ</a>
+    <a href="contact.html" class="extra-link">Contact</a>
+    </div>
+    <div class="menu-mascot-container text-center mt-5">
+    <img src="bluealienmascot.png" alt="Area 52 Mascotte" class="img-fluid menu-alien">
+  </div>
+</div>
+</div>
 
 <header class="site-header">
   <nav class="navbar navbar-expand-lg navbar-dark">
@@ -19,142 +35,94 @@
         <span class="logo-sub">Vakantiepark</span>
       </a>
 
-      <ul class="navbar-nav mx-auto">
-        <li class="nav-item"><a class="nav-link pill-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link pill-link" href="accommodatie.html">Slapen</a></li>
-        <li class="nav-item"><a class="nav-link pill-link" href="horeca.html">Eten & Drinken</a></li>
-        <li class="nav-item"><a class="nav-link pill-link active" href="activiteiten.html">Doen</a></li>
-      </ul>
+      <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-      <a href="#" class="btn-cta-pill">BOEK NU</a>
+      <div class="collapse navbar-collapse" id="navContent">
+        <ul class="navbar-nav mx-auto text-center">
+          <li class="nav-item"><a class="nav-link pill-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link pill-link" href="accommodatie.html">Accomodatie</a></li>
+          <li class="nav-item"><a class="nav-link pill-link" href="horeca.html">Horeca</a></li>
+          <li class="nav-item"><a class="nav-link pill-link" href="activiteiten.html">Activiteiten</a></li>
+        </ul>
+
+        <button class="btn-cta-pill" data-bs-toggle="offcanvas" data-bs-target="#extraMenu">
+          Menu ☰
+        </button>
+      </div>
     </div>
   </nav>
 </header>
 
+<section class="hero-video-container">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="\area52_promo.mp4" type="video/mp4">
+  </video>
+  <div class="video-overlay"></div>
+  <div class="hero-content-overlay text-center">
+    <div class="container">
+      <h1 class="display-3 fw-black text-green mb-2">ONTDEK HET BUITENAARDS AVONTUUR</h1>
+      <div class="hero-mascot-wrap mt-4">
+    
+      </div>
+    </div>
+  </div>
+
+
+</section>
+
 <main>
-
-<section class="page-hero">
-  <div class="container text-center">
-    <h1 class="page-title">Activiteiten</h1>
-    <p class="page-subtitle">Shows, workshops en avontuur</p>
-  </div>
-</section>
-
-<section class="page-content py-5">
-  <div class="container">
-    <div class="row g-4">
-
-      <div class="col-md-4">
-        <div class="nav-choice-card" style="--card-color: var(--area-purple);">
-          <h2>Alien Show</h2>
-          <p>Spannende show voor het hele gezin</p>
-          <a href="#" class="btn-cta-pill">Schrijf in</a>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="nav-choice-card" style="--card-color: var(--area-lime);">
-          <h2>Creatieve Workshop</h2>
-          <p>Voor kinderen van alle leeftijden</p>
-          <a href="#" class="btn-cta-pill">Schrijf in</a>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="nav-choice-card" style="--card-color: var(--area-pink);">
-          <h2>Buitenavontuur</h2>
-          <p>Ontdek Area 52 in de natuur</p>
-          <a href="#" class="btn-cta-pill">Doe mee</a>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
+  
 </main>
-
+</section>
 <footer class="area-footer">
-
-  <!-- TOP SERVICE BAR -->
   <div class="footer-top">
-    <div class="container footer-top-grid">
-
-      <div>
-        <strong>Service & contact</strong>
-        <p>Bekijk de veelgestelde vragen of neem contact op met Area 52.</p>
+    <div class="container">
+        <div class="col-md-4">
       </div>
-
-      <div>
-        <strong>Volg ons</strong>
-        <div class="footer-socials">
-          <span>📘</span>
-          <span>📸</span>
-          <span>🎵</span>
-          <span>▶️</span>
-        </div>
-      </div>
-
-      <div>
-        <strong>Vakantietips & inspiratie</strong>
-        <div class="newsletter">
-          <input type="email" placeholder="E-mailadres">
-          <button>OK</button>
-        </div>
-      </div>
-
     </div>
   </div>
 
-  <!-- MAIN FOOTER -->
-  <div class="footer-main">
-    <div class="container footer-grid">
-
-      <div>
-        <h4>Boekingsinformatie</h4>
-        <ul>
-          <li>Extra’s bijboeken</li>
-          <li>Onze zekerheden</li>
-          <li>Voorwaarden</li>
-          <li>Verzekeringen</li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>Service</h4>
-        <ul>
-          <li>Contact</li>
-          <li>FAQ</li>
-          <li>Zakelijk huren</li>
-          <li>Area 52 Care</li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>Over Area 52</h4>
-        <ul>
-          <li>Over ons</li>
-          <li>Duurzaamheid</li>
-          <li>Werken bij Area 52</li>
-          <li>Nieuws</li>
-        </ul>
-      </div>
-
-      <div>
-        <h4>Veilig betalen met</h4>
-        <p>iDEAL · VISA · Mastercard</p>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- BOTTOM BAR -->
   <div class="footer-bottom">
-    <p>© 2026 Area 52 Vakantiepark — Prototype voor schoolopdracht</p>
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-6 col-md-3">
+          <h5>Boeken</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Extra’s</a></li>
+            <li><a href="#">Voorwaarden</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <h5>Service</h5>
+          <ul class="list-unstyled">
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <h5>Area 52</h5>
+          <ul class="list-unstyled">
+            <li><a href="#">Over ons</a></li>
+            <li><a href="#">Vacatures</a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3">
+          <h5>Betalen</h5>
+          <p class="small fw-bold">iDEAL • VISA • MASTERCARD</p>
+        </div>
+      </div>
+    </div>
   </div>
 
+  <div class="footer-bottom">
+    <div class="container">
+      © 2026 Area 52 Vakantiepark
+    </div>
+  </div>
 </footer>
 
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
