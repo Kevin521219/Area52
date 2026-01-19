@@ -2,7 +2,7 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <title>Area 52 Vakantiepark | Digital Experience</title>
+  <title>Horeca | Area 52 Vakantiepark</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
@@ -10,9 +10,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-
-<div class="offcanvas offcanvas-end extra-menu" tabindex="-1" id="extraMenu">
+<body class="accommodation-body"> <div class="offcanvas offcanvas-end extra-menu" tabindex="-1" id="extraMenu">
   <div class="offcanvas-header">
     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
   </div>
@@ -20,11 +18,10 @@
     <a href="gallery.html" class="extra-link"> Gallery</a>
     <a href="faq.html" class="extra-link"> FAQ</a>
     <a href="contact.html" class="extra-link">Contact</a>
-    </div>
     <div class="menu-mascot-container text-center mt-5">
-    <img src="bluealienmascot.png" alt="Area 52 Mascotte" class="img-fluid menu-alien">
+      <img src="bluealienmascot.png" alt="Area 52 Mascotte" class="img-fluid menu-alien">
+    </div>
   </div>
-</div>
 </div>
 
 <header class="site-header">
@@ -57,36 +54,56 @@
 
 <section class="hero-video-container">
   <video autoplay muted loop playsinline class="hero-video">
-    <source src="\area52_promo.mp4" type="video/mp4">
+    <source src="area52_promo.mp4" type="video/mp4">
   </video>
   <div class="video-overlay"></div>
   <div class="hero-content-overlay text-center">
     <div class="container">
-      <h1 class="display-3 fw-black text-green mb-2">ONTDEK HET BUITENAARDS AVONTUUR</h1>
-      <div class="hero-mascot-wrap mt-4">
-    
+      <h1 class="display-3 fw-black text-green mb-2">BUITENAARDS LEKKER ETEN</h1>
+    </div>
+  </div>
+</section>
+
+<main class="container my-5">
+
+
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="accommodation-card">
+        <img src="Alienfood1.jpg" alt="Cosmic Popcorn" class="card-img-top rounded-4 mb-3">
+        <h3>Cosmic Popcorn</h3>
+        <p>De beste burgers van het hele sterrenstelsel.</p>
+        <div class="price-tag mb-3">Vanaf €12,50</div>
+        <a href="#" class="btn-cta-pill d-block text-center">Bekijk Menu</a>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="accommodation-card">
+        <img src="Alienfood2.jpg" alt="Milky Way Diner" class="card-img-top rounded-4 mb-3">
+        <h3>Milky Way Diner</h3>
+        <p>Geniet van shakes en snacks in 50s space-stijl.</p>
+        <div class="price-tag mb-3">Vanaf €8,00</div>
+        <a href="#" class="btn-cta-pill d-block text-center">Bekijk Menu</a>
+      </div>
+    </div>
+
+    <div class="col-md-4">
+      <div class="accommodation-card">
+        <img src="Alienfood3.jpg" alt="Star Sushi" class="card-img-top rounded-4 mb-3">
+        <h3>Star Sushi</h3>
+        <p>Verse Sushi uit de Milky way.</p>
+        <div class="price-tag mb-3">Vanaf €14,00</div>
+        <a href="#" class="btn-cta-pill d-block text-center">Bekijk Menu</a>
       </div>
     </div>
   </div>
-
-
-</section>
-
-<main>
-  
 </main>
-</section>
-<footer class="area-footer">
-  <div class="footer-top">
-    <div class="container">
-        <div class="col-md-4">
-      </div>
-    </div>
-  </div>
 
+<footer class="area-footer">
   <div class="footer-bottom">
     <div class="container">
-      <div class="row g-5">
+      <div class="row g-5 text-center text-md-start">
         <div class="col-6 col-md-3">
           <h5>Boeken</h5>
           <ul class="list-unstyled">
@@ -116,8 +133,8 @@
     </div>
   </div>
 
-  <div class="footer-bottom">
-    <div class="container">
+  <div class="footer-bottom border-top border-secondary">
+    <div class="container text-center py-3">
       © 2026 Area 52 Vakantiepark
     </div>
   </div>

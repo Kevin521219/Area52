@@ -2,15 +2,17 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <title>Area 52 Vakantiepark | Digital Experience</title>
+  <title>Contact | Area 52 Vakantiepark</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+  </style>
 </head>
 
-<body>
+<body class="accommodation-body">
 
 <div class="offcanvas offcanvas-end extra-menu" tabindex="-1" id="extraMenu">
   <div class="offcanvas-header">
@@ -20,11 +22,10 @@
     <a href="gallery.html" class="extra-link"> Gallery</a>
     <a href="faq.html" class="extra-link"> FAQ</a>
     <a href="contact.html" class="extra-link">Contact</a>
-    </div>
     <div class="menu-mascot-container text-center mt-5">
-    <img src="bluealienmascot.png" alt="Area 52 Mascotte" class="img-fluid menu-alien">
+      <img src="bluealienmascot.png" alt="Area 52 Mascotte" class="img-fluid menu-alien">
+    </div>
   </div>
-</div>
 </div>
 
 <header class="site-header">
@@ -57,67 +58,58 @@
 
 <section class="hero-video-container">
   <video autoplay muted loop playsinline class="hero-video">
-    <source src="\area52_promo.mp4" type="video/mp4">
+    <source src="area52_promo.mp4" type="video/mp4">
   </video>
   <div class="video-overlay"></div>
   <div class="hero-content-overlay text-center">
     <div class="container">
-      <h1 class="display-3 fw-black text-green mb-2">ONTDEK HET BUITENAARDS AVONTUUR</h1>
-      <div class="hero-mascot-wrap mt-4">
-    
-      </div>
+      <h1 class="display-3 fw-black text-green mb-2">NEEM CONTACT OP</h1>
     </div>
   </div>
-
-
 </section>
 
-<main>
-  
+<main class="container my-5">
+  <div class="row g-5"> <div class="col-lg-6">
+      <div class="contact-card h-100"> <h2 class="section-title mb-4" style="color: var(--area-pink); text-align: left;">STUUR EEN BERICHT</h2>
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Naam</label>
+            <input type="text" class="form-control" placeholder="Jouw naam">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">E-mailadres</label>
+            <input type="email" class="form-control" placeholder="naam@voorbeeld.nl">
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Bericht</label>
+            <textarea class="form-control" rows="5" placeholder="Stel hier je vraag over ons park..."></textarea>
+          </div>
+          <button type="submit" class="btn-cta-pill w-100 py-3">VERZENDEN</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="col-lg-6">
+      <div class="contact-info-box h-100"> <h2 class="section-title mb-4" style="color: var(--area-pink); text-align: left;">GEGEVENS</h2>
+        <p><strong>Adres:</strong><br>Roswell Road 52<br>3012 CL Rotterdam</p>
+        <p><strong>Telefoon:</strong><br>+31 (0)10 123 45 67</p>
+        <p><strong>E-mail:</strong><br>info@area52vakantiepark.nl</p>
+        
+        <hr class="my-4" style="border-top: 2px solid var(--area-pink);">
+        
+        <h3 class="mb-3" style="color: var(--area-pink); font-weight: 900;">LOCATIE</h3>
+        <div class="rounded-4 overflow-hidden border border-2 border-dark" style="height: 200px; background-color: #ddd; display: flex; align-items: center; justify-content: center;">
+          <span class="text-muted fw-bold">KAART WORDT GELADEN...</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
 </main>
-</section>
+
 <footer class="area-footer">
-  <div class="footer-top">
-    <div class="container">
-        <div class="col-md-4">
-      </div>
-    </div>
-  </div>
-
   <div class="footer-bottom">
-    <div class="container">
-      <div class="row g-5">
-        <div class="col-6 col-md-3">
-          <h5>Boeken</h5>
-          <ul class="list-unstyled">
-            <li><a href="#">Extra’s</a></li>
-            <li><a href="#">Voorwaarden</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md-3">
-          <h5>Service</h5>
-          <ul class="list-unstyled">
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md-3">
-          <h5>Area 52</h5>
-          <ul class="list-unstyled">
-            <li><a href="#">Over ons</a></li>
-            <li><a href="#">Vacatures</a></li>
-          </ul>
-        </div>
-        <div class="col-6 col-md-3">
-          <h5>Betalen</h5>
-          <p class="small fw-bold">iDEAL • VISA • MASTERCARD</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="footer-bottom">
-    <div class="container">
+    <div class="container text-center py-4">
       © 2026 Area 52 Vakantiepark
     </div>
   </div>

@@ -22,7 +22,9 @@ body {
     --area-yellow: #ffca28;
     --dark-green:  #2f4b3a;
     --sand:        #f6ebd9;
-    --white:       #ffffff;
+    --white:       #ffffff; 
+    --area-light-blue: #216bff; /* De lichtblauwe kleur uit je brandguide */
+}
 }
 
 /* =====================================================
@@ -241,28 +243,55 @@ body {
 /* =====================================================
    6. ACCOMMODATIE CARDS STYLING
    ===================================================== */
+/* 1. De achtergrond van de pagina aanpassen */
+.accommodation-body {
+    background-color: var(--area-light-blue) !important;
+    background-image: none !important; /* Verwijdert de gele stippen voor een strakke blauwe look */
+}
+
+/* 2. De kaarten aanpassen naar Roze */
 .accommodation-card {
     background-color: var(--white);
     border-radius: 30px;
-    border: 4px solid var(--area-purple);
+    /* Rand is nu roze in plaats van paars */
+    border: 4px solid var(--area-pink); 
     transition: all 0.3s ease;
     height: 100%;
-    box-shadow: 0 10px 0 var(--area-purple);
+    /* Schaduw is nu ook roze */
+    box-shadow: 0 10px 0 var(--area-pink);
     margin-bottom: 20px;
+    text-align: center;
+    padding: 20px;
 }
 
 .accommodation-card:hover {
-    transform: translateY(-10px); /* Kaart springt omhoog bij hover */
-    box-shadow: 0 15px 0 var(--area-purple);
-    border-color: var(--area-pink);
+    transform: translateY(-10px);
+    box-shadow: 0 15px 0 var(--area-pink);
+    /* Bij hover kan de rand eventueel paars oplichten voor contrast */
+    border-color: var(--area-purple);
+}
+
+/* 3. De cijfers  */
+.price-tag {
+    color: var(--area-purple) !important; /* Matcht met de titels erboven */
+    font-weight: 900;
+    font-size: 1.5rem;
+    margin: 15px 0;
+}
+
+/* De titels zelf (ter controle) */
+.accommodation-card h3 {
+    color: var(--area-purple);
+    font-weight: 900;
+    text-transform: uppercase;
 }
 
 .section-title {
-    color: var(--area-purple);
     font-weight: 900;
     text-transform: uppercase;
     text-shadow: 3px 3px 0px var(--area-lime);
 }
+
 
 /* =====================================================
    7. DE ROZE FOOTER FIX (GEEN BLAUWE LINKS)
@@ -352,3 +381,118 @@ footer h4, footer h5, .footer-main h5 {
     text-transform: uppercase !important;
 }
 
+/* =====================================================
+   RECHTER MENU (OFFCANVAS) STYLING
+   ===================================================== */
+.extra-menu {
+    background-color: var(--area-pink) !important; /* Maakt het menu roze */
+    border-left: 5px solid var(--area-purple);     /* Paarse rand voor contrast */
+}
+
+.extra-menu .offcanvas-header {
+    border-bottom: 2px solid rgba(255,255,255,0.2);
+}
+
+/* De links in het rechter menu */
+.extra-link {
+    display: block;
+    color: white !important;
+    text-decoration: none;
+    font-size: 2rem;           /* Grote letters */
+    font-weight: 900;          /* Dikke letters */
+    text-transform: uppercase; /* Alles in hoofdletters */
+    padding: 15px 30px;
+    transition: all 0.3s ease;
+    font-family: 'Nunito', sans-serif;
+}
+
+.extra-link:hover {
+    color: var(--area-lime) !important; /* Letters worden groen bij hover */
+    padding-left: 45px;                   /* Schuift een stukje op */
+    text-shadow: 2px 2px 0px var(--dark-green);
+}
+
+/* De sluitknop (kruisje) groter maken */
+.btn-close-white {
+    width: 2em;
+    height: 2em;
+    opacity: 1;
+}
+/* Specifieke fix voor de Index/Home pagina */
+.home-body {
+    background-color: var(--sand) !important; /* Of een andere kleur naar wens */
+    background-image: none !important; /* Dit verwijdert de puntjes die alles blokkeren */
+}
+
+/* Zorg dat de navbar ALTIJD roze is op elke pagina */
+.navbar {
+    background-color: var(--area-pink) !important;
+    background-image: none !important;
+}
+
+/* Fix voor de witte letters in de header op de lichte achtergrond */
+.nav-link {
+    color: white !important;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+    /* Specifieke styling voor het contactformulier */
+    .contact-card {
+      background-color: var(--white);
+      border: 4px solid var(--area-pink);
+      border-radius: 30px;
+      padding: 40px;
+      box-shadow: 0 10px 0 var(--area-pink);
+    }
+    .form-label {
+      font-weight: 800;
+      color: var(--area-purple);
+      text-transform: uppercase;
+    }
+    .form-control {
+      border: 2px solid var(--area-pink);
+      border-radius: 15px;
+      padding: 12px;
+    }
+    .form-control:focus {
+      border-color: var(--area-purple);
+      box-shadow: 0 0 0 0.25rem rgba(123, 44, 191, 0.25);
+    }
+    .contact-info-box {
+      background-color: var(--white);
+      border: 4px solid var(--area-purple);
+      border-radius: 30px;
+      padding: 30px;
+      box-shadow: 0 10px 0 var(--area-purple);
+      height: 100%;
+    }
+
+    /* Zorgt dat beide kaarten IDENTIEK roze zijn */
+.contact-card, .contact-info-box {
+    background-color: var(--white) !important;
+    border: 4px solid var(--area-pink) !important; /* Roze rand */
+    border-radius: 30px !important;
+    padding: 40px !important;
+    box-shadow: 0 10px 0 var(--area-pink) !important; /* Roze schaduw */
+    height: 100%;
+}
+
+/* Alle labels en titels in de kaarten roze maken */
+.form-label, .contact-info-box h3, .contact-info-box p strong {
+    font-weight: 800;
+    color: var(--area-pink) !important; /* Veranderd van paars naar roze */
+    text-transform: uppercase;
+}
+
+/* De focus van de invoervelden ook roze maken */
+.form-control:focus {
+    border-color: var(--area-pink) !important;
+    box-shadow: 0 0 0 0.25rem rgba(255, 95, 162, 0.25) !important;
+}
+
+/* Verwijder de groene schaduw op de contactpagina koppen */
+.contact-card .section-title, 
+.contact-info-box .section-title {
+    text-shadow: none !important;
+    color: var(--area-pink) !important;
+}

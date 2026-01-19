@@ -2,17 +2,45 @@
 <html lang="nl">
 <head>
   <meta charset="UTF-8">
-  <title>Area 52 Vakantiepark | Digital Experience</title>
+  <title>FAQ | Area 52 Vakantiepark</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    /* Specifieke styling voor de FAQ accordion */
+    .accordion-item {
+      background-color: var(--white);
+      border: 4px solid var(--area-pink) !important;
+      border-radius: 20px !important;
+      margin-bottom: 15px;
+      overflow: hidden;
+      box-shadow: 0 8px 0 var(--area-pink);
+    }
+    .accordion-button {
+      font-weight: 900;
+      color: var(--area-purple) !important;
+      text-transform: uppercase;
+      padding: 20px;
+    }
+    .accordion-button:not(.collapsed) {
+      background-color: var(--area-pink);
+      color: white !important;
+      box-shadow: none;
+    }
+    .accordion-button::after {
+      filter: hue-rotate(150deg); /* Maakt het icoontje passend bij het thema */
+    }
+    .accordion-body {
+      color: var(--dark-green);
+      font-weight: 700;
+      line-height: 1.6;
+    }
+  </style>
 </head>
 
-<body>
-
-<div class="offcanvas offcanvas-end extra-menu" tabindex="-1" id="extraMenu">
+<body class="accommodation-body"> <div class="offcanvas offcanvas-end extra-menu" tabindex="-1" id="extraMenu">
   <div class="offcanvas-header">
     <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
   </div>
@@ -20,11 +48,10 @@
     <a href="gallery.html" class="extra-link"> Gallery</a>
     <a href="faq.html" class="extra-link"> FAQ</a>
     <a href="contact.html" class="extra-link">Contact</a>
-    </div>
     <div class="menu-mascot-container text-center mt-5">
-    <img src="bluealienmascot.png" alt="Area 52 Mascotte" class="img-fluid menu-alien">
+      <img src="bluealienmascot.png" alt="Area 52 Mascotte" class="img-fluid menu-alien">
+    </div>
   </div>
-</div>
 </div>
 
 <header class="site-header">
@@ -57,36 +84,83 @@
 
 <section class="hero-video-container">
   <video autoplay muted loop playsinline class="hero-video">
-    <source src="\area52_promo.mp4" type="video/mp4">
+    <source src="area52_promo.mp4" type="video/mp4">
   </video>
   <div class="video-overlay"></div>
   <div class="hero-content-overlay text-center">
     <div class="container">
-      <h1 class="display-3 fw-black text-green mb-2">ONTDEK HET BUITENAARDS AVONTUUR</h1>
-      <div class="hero-mascot-wrap mt-4">
-    
+      <h1 class="display-3 fw-black text-green mb-2">VEELGESTELDE VRAGEN</h1>
+    </div>
+  </div>
+</section>
+
+<main class="container my-5">
+
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="accordion" id="faqAccordion">
+        
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+              Hoe laat kan ik inchecken in mijn Lunar Lodge?
+            </button>
+          </h2>
+          <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Je bent vanaf 15:00 uur welkom om te landen in je accommodatie. Wil je eerder komen? Gebruik dan onze Early Landing service via de app!
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+              Zijn honden toegestaan op Area 52?
+            </button>
+          </h2>
+          <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Zeker! Zolang je viervoeter aangelijnd blijft en geen aliens opjaagt, is hij meer dan welkom op ons park.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+              Is er gratis Wi-Fi in het hele park?
+            </button>
+          </h2>
+          <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Jazeker, wij bieden een intergalactische verbinding aan die overal op het park gratis te gebruiken is voor al onze gasten.
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+              Wat moet ik doen bij een UFO-waarneming?
+            </button>
+          </h2>
+          <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+            <div class="accordion-body">
+              Geen paniek! Pak je camera, maak een foto en deel deze met de hashtag #Area52Vakantie. Onze mascotte komt waarschijnlijk gewoon even gedag zeggen.
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   </div>
-
-
-</section>
-
-<main>
-  
 </main>
-</section>
-<footer class="area-footer">
-  <div class="footer-top">
-    <div class="container">
-        <div class="col-md-4">
-      </div>
-    </div>
-  </div>
 
+<footer class="area-footer">
   <div class="footer-bottom">
     <div class="container">
-      <div class="row g-5">
+      <div class="row g-5 text-center text-md-start">
         <div class="col-6 col-md-3">
           <h5>Boeken</h5>
           <ul class="list-unstyled">
@@ -115,9 +189,8 @@
       </div>
     </div>
   </div>
-
-  <div class="footer-bottom">
-    <div class="container">
+  <div class="footer-bottom border-top border-secondary">
+    <div class="container text-center py-3">
       © 2026 Area 52 Vakantiepark
     </div>
   </div>
